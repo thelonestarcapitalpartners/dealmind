@@ -62,6 +62,12 @@ git commit -m "Add alembic migrations"
   - No project root override is required; the root `package.json` and `vercel.json` already point to `web/package.json`.
   - Set environment variable `NEXT_PUBLIC_API_URL` to your backend URL.
   - Deploy the app.
+  - Automated deploys (recommended):
+    - Create a Vercel token: In Vercel Dashboard → Settings → Tokens → Create Token. Copy the token.
+    - Find your Project ID and Org/Team ID: Project → Settings → General → Project ID; Team/Org ID is under Account/Team settings.
+    - Add GitHub repository secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` (repo Settings → Secrets → Actions).
+    - The repository contains a GitHub Action `.github/workflows/vercel-auto-deploy.yml` that will run on each push to `main` and trigger a production deploy.
+    - After adding the 3 secrets, push a new commit to `main` to trigger the workflow.
   - If you see an error about a missing `public` output directory, clear any custom "Output Directory" in the Vercel Project Settings (Build & Development Settings). Leave it empty so Vercel uses the Next.js build output. Alternatively, set the Output Directory to `web/.next`.
 - Render/Fly/AWS for backend: use `render.yaml` or `fly.toml` as template.
 
