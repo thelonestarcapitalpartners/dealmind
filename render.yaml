@@ -1,0 +1,30 @@
+# Example render.yaml for deploying backend and web to Render (edit values)
+services:
+  - type: web
+    name: dealmind-backend
+    env: docker
+    plan: starter
+    repo: https://github.com/<your-org>/DealMind
+    branch: main
+    dockerCommand: /app/entrypoint.sh uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: $DATABASE_URL
+      - key: REDIS_URL
+        value: $REDIS_URL
+      - key: SUPABASE_URL
+        value: $SUPABASE_URL
+      - key: SUPABASE_KEY
+        value: $SUPABASE_KEY
+
+  - type: web
+    name: dealmind-web
+    env: node
+    plan: starter
+    repo: https://github.com/<your-org>/DealMind
+    branch: main
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://api.yourdomain.com

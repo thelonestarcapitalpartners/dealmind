@@ -1,0 +1,18 @@
+# Example fly.toml for Fly.io deployment
+app = "dealmind-backend"
+
+[build]
+  image = "ghcr.io/<org>/dealmind-backend:latest"
+
+[env]
+  DATABASE_URL = ""
+  REDIS_URL = ""
+  SUPABASE_URL = ""
+  SUPABASE_KEY = ""
+
+[[services]]
+  internal_port = 8000
+  protocol = "tcp"
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80

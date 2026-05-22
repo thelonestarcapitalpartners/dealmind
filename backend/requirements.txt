@@ -1,0 +1,72 @@
+# FastAPI and Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.13.1
+sqlmodel==0.0.14
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+pyjwt==2.8.1
+python-multipart==0.0.6
+
+# External APIs
+openai==1.3.9
+supabase==2.4.0
+stripe==7.8.0
+requests==2.31.0
+
+# PDF Processing
+pdfplumber==0.10.3
+PyMuPDF==1.23.6
+python-docx==0.8.11
+
+# Image Processing
+Pillow==10.1.0
+pytesseract==0.3.10
+
+# Data Processing
+pandas==2.1.3
+numpy==1.26.2
+
+# Async & Caching
+redis==5.0.1
+celery==5.3.4
+aioredis==2.0.1
+
+# HTTP Clients
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Logging
+python-json-logger==2.0.7
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+httpx==0.25.2
+
+# Code Quality
+black==23.12.0
+flake8==6.1.0
+isort==5.13.2
+mypy==1.7.0
+pylint==3.0.3
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.4.14
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3.post1
