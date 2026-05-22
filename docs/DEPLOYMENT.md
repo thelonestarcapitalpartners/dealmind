@@ -58,11 +58,10 @@ git commit -m "Add alembic migrations"
 7) Deploy
 
 - Vercel for `web` (Next.js):
-  - Connect the GitHub repo to Vercel.
-  - Set the project root to `web` if Vercel does not auto-detect the Next.js app.
+  - Connect the repo `thelonestarcapitalpartners/dealmind` to Vercel.
+  - No project root override is required; the root `package.json` and `vercel.json` already point to `web/package.json`.
   - Set environment variable `NEXT_PUBLIC_API_URL` to your backend URL.
   - Deploy the app.
-  - If using the root `vercel.json`, Vercel should route the build to `web/package.json`.
 - Render/Fly/AWS for backend: use `render.yaml` or `fly.toml` as template.
 
 8) Post-deploy

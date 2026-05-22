@@ -1,11 +1,5 @@
 {
-  "version": 3,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/web/$1"
-    }
-  ],
+  "version": 2,
   "builds": [
     {
       "src": "web/package.json",

@@ -1,0 +1,14 @@
+backend/
+frontend/
+docs/
+scripts/
+.gitignore
+.github/
+README.md
+render.yaml
+fly.toml
+.vercelignore
+*.md
+**/node_modules/**
+**/dist/**
+**/.next/**

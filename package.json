@@ -1,0 +1,16 @@
+{
+  "name": "dealmind",
+  "private": true,
+  "workspaces": [
+    "web",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "cd web && npm install && npm run build",
+    "dev": "cd web && npm install && npm run dev",
+    "vercel-build": "cd web && npm install && npm run build"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
