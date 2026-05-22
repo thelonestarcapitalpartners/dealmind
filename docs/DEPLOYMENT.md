@@ -62,6 +62,7 @@ git commit -m "Add alembic migrations"
   - No project root override is required; the root `package.json` and `vercel.json` already point to `web/package.json`.
   - Set environment variable `NEXT_PUBLIC_API_URL` to your backend URL.
   - Deploy the app.
+  - If you see an error about a missing `public` output directory, clear any custom "Output Directory" in the Vercel Project Settings (Build & Development Settings). Leave it empty so Vercel uses the Next.js build output. Alternatively, set the Output Directory to `web/.next`.
 - Render/Fly/AWS for backend: use `render.yaml` or `fly.toml` as template.
 
 8) Post-deploy
